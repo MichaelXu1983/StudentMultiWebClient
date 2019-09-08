@@ -6,7 +6,11 @@
 ## 技术栈
 Taro + Taro UI + Redux + Webpack + ES6
 
-## 截图
+## 截图  
+
+![](./src/assets/images/other/AppPreview.jpg)  
+
+![](./src/assets/images/other/QRCode.jpg)  
 
 ## 目录
 1. [环境安装](#环境安装)
