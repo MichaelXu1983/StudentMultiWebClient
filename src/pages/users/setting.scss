@@ -1,0 +1,70 @@
+.setting {
+  position: absolute;
+
+  width: 100%;
+  min-height: 100%;
+  background-color: #f7f7f9;
+}
+.setting-link {
+  width: 100%;
+  padding: 40px 0;
+}
+.setting-link__item {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  margin: 40px auto 0 auto;
+  height: 140px;
+  border-radius: 16px;
+  background-color: #fff;
+}
+.setting-link__extra {
+  position: absolute;
+  right: 90px;
+  top: 0;
+  width: 30%;
+  text-align: right;
+}
+.setting-link__extra-text {
+  font-size: 30px;
+  color: #ccc;
+  line-height: 140px;
+}
+.setting-link__extra--help {
+  width: 60px;
+  height: 60px;
+}
+.setting-link__title {
+  position: absolute;
+  left: 40px;
+  top: 0;
+  z-index: 99;
+  width: 90%;
+  height: 100%;
+}
+.setting-link__title-text {
+  position: absolute;
+  top: 0;
+  font-size: 34px;
+  color: #2a2a30;
+
+  height: 140px;
+  line-height: 140px;
+}
+.setting-link__arrow {
+  position: absolute;
+  right: 20px;
+  top: 43px;
+  width: 50px;
+}
+.setting-link__arrow--active {
+  width: 50px;
+  height: 50px;
+}
+.setting-link__title-chart-text {
+  width: 100%;
+  font-size: 34px;
+  color: #2a2a30;
+  line-height: 140px;
+  padding-right: 20px;
+}

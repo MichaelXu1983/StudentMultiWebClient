@@ -1,0 +1,227 @@
+.index {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: #fff;
+}
+.index__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 590px;
+}
+.index-header {
+  position: relative;
+  z-index: 19;
+  width: 90%;
+  height: 50px;
+  margin: 20px auto 0 auto;
+}
+.index__message,
+.index__notice {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 89;
+  width: 37px;
+  height: 46px;
+}
+.index__message {
+  left: auto;
+  right: 0;
+  width: 35px;
+}
+.index-card {
+  position: relative;
+  z-index: 100;
+  width: 90%;
+  height: 450px;
+  margin: 20px auto 0 auto;
+  border-radius: 8px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.index-card__username {
+  width: 80%;
+  height: 140px;
+  line-height: 140px;
+  margin: 20px auto 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
+.index-card__button {
+  /*  #ifndef  rn  */
+  display: block;
+  /*  #endif  */
+  width: 300px;
+  height: 80px;
+  line-height: 80px;
+  margin: 20px auto 10px auto;
+  /*  #ifndef  rn  */
+  background-image: linear-gradient(-134deg, #c86dd7 0%, #3023ae 100%);
+  /*  #endif  */
+  background-color: #6b40bd;
+  border-color: transparent;
+  border-radius: 60px;
+  text-align: center;
+}
+.index-card__tips {
+  width: 80%;
+  height: 88px;
+  line-height: 88px;
+  margin: 30px auto 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.index-card__username-text,
+.index-card__button-text,
+.index-card__tips-text {
+  /*  #ifndef  rn  */
+  display: inline-block;
+  /*  #endif  */
+  font-weight: 400;
+  color: #444;
+}
+.index-card__username-text {
+  line-height: 70px;
+  font-size: 42px;
+  color: #7d4c9f;
+}
+.index-card__button-text {
+  font-size: 30px;
+  color: #fff;
+  letter-spacing: 4px;
+}
+.index-card__tips-text {
+  line-height: 44px;
+  font-size: 28px;
+  color: #777;
+}
+
+.index-card__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 60px;
+  border-radius: 8px;
+  background-color: #b39db72e;
+}
+.index-card__icon {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+.index-card__icon-ok {
+  width: 30px;
+  height: 30px;
+  /*  #ifndef  rn  */
+  vertical-align: middle;
+  /*  #endif  */
+}
+.index-card__icon-text {
+  padding-left: 10px;
+  font-size: 24px;
+  color: #7d4c9f;
+  text-align: center;
+}
+.index-notice {
+  width: 90%;
+  margin: 60px auto 0 auto;
+  overflow: hidden;
+}
+.index__maintitle {
+  margin: 20px 0;
+}
+.index__maintitle-text {
+  font-size: 30px;
+  color: #444;
+}
+.index-notice__swiper,
+.index-notice__swiper-navigator,
+.index-notice__swiper-img {
+  /*  #ifndef  rn  */
+  display: block;
+  /*  #endif  */
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 160px;
+  border-radius: 8px;
+  text-align: center;
+}
+.index-notice__swiper-img {
+  border-radius: 10px;
+}
+.index-guide {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  overflow: hidden;
+}
+.index-guide__content {
+  position: relative;
+  width: 100%;
+  height: 160px;
+}
+.index__navigator {
+  /*  #ifndef  rn  */
+  display: block;
+  /*  #endif  */
+}
+.index-guide__bg-left,
+.index-guide__bg-right {
+  /*  #ifndef  rn  */
+  display: block;
+  /*  #endif  */
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 19;
+  width: 48%;
+  height: 100%;
+}
+.index-guide__bg-right {
+  left: auto;
+  right: 0;
+}
+.index__notice-status,
+.index__message-status {
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  z-index: 109;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.index__notice-status-border,
+.index__message-status-border {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 110;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  background-color: #f64272;
+  border-radius: 10px;
+}
+.index__message-status {
+  left: auto;
+  right: 0;
+}

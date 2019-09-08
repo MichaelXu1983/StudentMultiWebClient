@@ -1,0 +1,131 @@
+.courses-list {
+  width: 100%;
+  min-height: 100%;
+  background-color: #fff;
+  /*  #ifndef  rn  */
+  line-height: 1.2;
+  /*  #endif  */
+}
+
+.courses-list-header {
+  position: relative;
+  width: 100%;
+  height: 480px;
+}
+.courses-list__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 79;
+  width: 100%;
+  height: 100%;
+}
+.courses-list-header__intro-maintitle {
+  position: relative;
+  z-index: 99;
+  padding: 50px 60px 0 60px;
+}
+.courses-list-header__intro-subtitle {
+  /*  #ifndef  rn  */
+  display: -webkit-box;
+  /*  #endif  */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  position: relative;
+  z-index: 99;
+  padding: 20px 60px 0 60px;
+  max-height: 230px;
+}
+
+.courses-list-header__maintitle-text {
+  color: #fff;
+  font-size: 36px;
+  letter-spacing: 2px;
+}
+.courses-list-header__subtitle-text {
+  color: #fff;
+  font-size: 28px;
+  line-height: 47px;
+  letter-spacing: 2px;
+}
+
+.courses-list-item__container {
+  position: relative;
+  z-index: 99;
+  width: 90%;
+  min-height: 100%;
+  margin: -100px auto 0 auto;
+}
+.courses-list-item {
+  /*  #ifndef  rn  */
+  display: flex;
+
+  /*  #endif  */
+  flex-direction: row;
+  width: 100%;
+  height: 224px;
+  margin-bottom: 50px;
+  background-color: #f7f7f9;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.courses-list-item,
+.courses-list-item__thumb,
+.courses-list-item__thumb-img {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.courses-list-item__intro-container {
+  position: relative;
+  flex: 1;
+  margin: 26px 30px;
+}
+.courses-list-item__thumb {
+  line-height: 0;
+  background-color: #f7f7f9;
+}
+.courses-list-item__thumb-img {
+  width: 200px;
+  height: 100%;
+}
+.courses-list-item__intro {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 60px;
+
+  /*  #ifndef  rn  */
+  display: -webkit-box;
+
+  /*  #endif  */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-align: left;
+}
+.courses-list-item__intro-maintitle {
+  height: 106px;
+  /*  #ifndef  rn  */
+  display: -webkit-box;
+
+  /*  #endif  */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.courses-list-item__maintitle {
+  color: #70449e;
+  font-size: 34px;
+  line-height: 50px;
+}
+.courses-list-item__subtitle {
+  color: #444;
+  font-size: 30px;
+}
+.courses-list-item__text {
+  line-height: 60px;
+  color: #777;
+  font-size: 26px;
+}

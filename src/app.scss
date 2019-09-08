@@ -1,0 +1,123 @@
+// 建议将 RN 不支持的但 H5 端又必不可少的样式放到下面 postcss-pxtransform... 标签内，组件的引入样式的优先级高于全局样式的优先级，处理器借助 css-to-react-native 将 Scss/Less 样式转换为 RN Stylesheet objects。如：样式重制相关的代码，不支持组合选择器的写法，不支持伪类及伪元素
+// RN 只支持 Flex 布局，参考：http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
+// RN 支持CSS属性，参考：https://nervjs.github.io/taro/docs/before-dev-remind.html,https://reactnative.cn/docs/0.47/layout-props.html
+// RN 已知不支持:box-shadow,animation,transform
+/*postcss-pxtransform rn eject enable*/
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+}
+.fixed {
+  bottom: 0;
+  /* 在 H5 模式下 tabBar 可能会挡住页面 fixed 元素问题，所以以下代码将会编译成 margin-bottom: 50px，在小程序模式下则会忽略，来解决此问题*/
+  margin-bottom: taro-tabbar-height;
+}
+/*postcss-pxtransform rn eject disable*/
+/* 该自定义组件的默认样式 */
+
+/* user-defined
+   ========================================================================== */
+
+/**
+ * Empty
+ */
+.global-empty {
+  width: 300px;
+  margin: 120px auto;
+  /*  #ifndef rn  */
+  text-align: center;
+  /*  #endif  */
+}
+.global-empty__pic,
+.global-empty__intro {
+  width: 300px;
+  margin: 20px auto;
+}
+.global-empty__pic-img {
+  width: 300px;
+  height: 300px;
+}
+.global-empty__text {
+  font-size: 28px;
+  color: #777;
+  text-align: center;
+}
+/**
+ * Button
+ */
+.am-button-primary,
+.am-button-disabled,
+.am-button-ghost {
+  margin: 60px 0 0 0;
+}
+.am-button-primary {
+    /*  #ifndef  rn  */
+    background-image: linear-gradient(-135deg, #69409e 0%, #dd84a5 100%);
+    /*  #endif  */
+  background-color: #6b40bd;
+  border-color: transparent;
+}
+.am-button-disabled {
+      /*  #ifndef  rn  */
+      background-image: linear-gradient(90deg, #e0e0e0 0%, #afafaf 100%);
+      /*  #endif  */
+  background-color: #afafaf;
+  border-color: transparent;
+}
+.am-button-ghost {
+  border: 2px solid #aa66a2;
+  border-color: #aa66a2;
+}
+.am-button-primary-text,
+.am-button-ghost-text {
+  letter-spacing: 4px;
+}
+.am-button-primary-text {
+  color: #fff;
+}
+.am-button-ghost-text {
+  color: #aa66a2;
+}
+.am-buttons {
+  margin: 60px 5%;
+}
+/**
+ * Empty
+ */
+.article-detail {
+  min-height: 100%;
+  padding: 40px;
+}
+.article-detail__title {
+  margin: 20px 0;
+  font-size: 38px;
+  font-weight: bold;
+  text-align: left;
+}
+.article-detail__subtitle {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+}
+.article-detail__text {
+  margin-bottom: 20px;
+  font-size: 30px;
+  line-height: 60px;
+  color: #444;
+  text-align: left;
+}
+.article-detail__img {
+  width: 100%;
+  margin: 20px auto;
+}
+.article-detail__img-block {
+  max-width: 100%;
+  margin: 20px auto;
+}
+.article-detail__richtext {
+  min-height: 100%;
+  text-align: center;
+}
