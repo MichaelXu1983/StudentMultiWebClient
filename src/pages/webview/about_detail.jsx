@@ -2,9 +2,7 @@ import Taro, { Component } from '@tarojs/taro'
 import { View, RichText } from '@tarojs/components'
 
 class About extends Component {
-  config = {
-    navigationBarTitleText: '关于我们',
-  }
+
   constructor() {
     super(...arguments)
     this.state = {
@@ -12,6 +10,7 @@ class About extends Component {
     }
     this.env = process.env.TARO_ENV
   }
+
   componentDidMount() {
     this.setState({
       detailNodes: [
@@ -49,7 +48,9 @@ class About extends Component {
       ]
     })
   }
-
+  config = {
+    navigationBarTitleText: '关于我们',
+  }
   render() {
     return (
       <View className='article-detail'>

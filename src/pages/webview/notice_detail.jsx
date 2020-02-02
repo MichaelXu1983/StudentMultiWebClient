@@ -2,9 +2,7 @@ import Taro, { Component } from '@tarojs/taro'
 import { View, RichText } from '@tarojs/components'
 
 class HelpDetail extends Component {
-  config = {
-    navigationBarTitleText: '袋小鼠爱编程应用上线了',
-  }
+
   constructor() {
     super(...arguments)
     this.state = {
@@ -19,6 +17,11 @@ class HelpDetail extends Component {
           name: 'div',
           attrs: { class: 'article-detail__title' },
           children: [{ type: 'text', text: '袋小鼠爱编程上线啦' }],
+        },
+        {
+          name: 'div',
+          attrs: { class: 'article-detail__subtitle' },
+          children: [{ type: 'text', text: '2018年9月10日' }],
         },
         {
           name: 'div',
@@ -61,19 +64,23 @@ class HelpDetail extends Component {
           children: [
             {
               type: 'text',
-              text: '我们的愿景是：让中国每个学校的每个学生都能像语文、数学、英语一样学习计算机科学。',
+              text: '我们的愿景是：让中国每个学校的每个学生都能像语文、数学、英语一样学习计算机科学1。',
             },
           ],
         },
+      ],
+      detailString: '<span>string nodes: love</span>'
 
-      ]
     })
   }
-
+  config = {
+    navigationBarTitleText: '袋小鼠爱编程应用上线了',
+  }
   render() {
     return (
       <View className='article-detail'>
         <RichText className='article-detail__richtext' nodes={this.state.detailNodes} />
+        <RichText className='article-detail__richtext' nodes={this.state.detailString} />
       </View>
     )
   }

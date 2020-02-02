@@ -33,7 +33,9 @@
   width: auto;
   padding-left: 30px;
   border: 2px solid #f7f7f9;
-  border-top: none;
+  /*  #ifndef  rn  */
+  border-bottom: none;
+  /*  #endif  */
 }
 .help-link__title-noborder {
   /*  #ifndef  rn  */

@@ -1,0 +1,68 @@
+/*  imported from setting.module.scss  */
+.setting-module__setting___1adOb {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  background-color: #f7f7f9; }
+
+.setting-module__setting-link___3dZl1 {
+  width: 100%;
+  padding: 40rpx 0; }
+
+.setting-module__setting-link__item___1lOXI {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  margin: 40rpx auto 0 auto;
+  height: 140rpx;
+  border-radius: 16rpx;
+  background-color: #fff; }
+
+.setting-module__setting-link__extra___1RV4z {
+  position: absolute;
+  right: 90rpx;
+  top: 0;
+  width: 30%;
+  text-align: right; }
+
+.setting-module__setting-link__extra-text___2r0No {
+  font-size: 30rpx;
+  color: #ccc;
+  line-height: 140rpx; }
+
+.setting-module__setting-link__extra--help___1Ptya {
+  width: 60rpx;
+  height: 60rpx; }
+
+.setting-module__setting-link__title___3HlC1 {
+  position: absolute;
+  left: 40rpx;
+  top: 0;
+  z-index: 99;
+  width: 90%;
+  height: 100%; }
+
+.setting-module__setting-link__title-text___1lx8e {
+  position: absolute;
+  top: 0;
+  font-size: 34rpx;
+  color: #2a2a30;
+  height: 140rpx;
+  line-height: 140rpx; }
+
+.setting-module__setting-link__arrow___1pWM_ {
+  position: absolute;
+  right: 20rpx;
+  top: 43rpx;
+  width: 50rpx; }
+
+.setting-module__setting-link__arrow--active___3Xf0x {
+  width: 50rpx;
+  height: 50rpx; }
+
+.setting-module__setting-link__title-chart-text___2Nlz6 {
+  width: 100%;
+  font-size: 34rpx;
+  color: #2a2a30;
+  line-height: 140rpx;
+  padding-right: 20rpx; }

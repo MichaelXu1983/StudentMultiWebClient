@@ -2,9 +2,7 @@ import Taro, { Component } from '@tarojs/taro'
 import { View, RichText } from '@tarojs/components'
 
 class HelpDetail extends Component {
-  config = {
-    navigationBarTitleText: '帮助中心',
-  }
+
   constructor() {
     super(...arguments)
     this.state = {
@@ -12,6 +10,7 @@ class HelpDetail extends Component {
     }
     this.env = process.env.TARO_ENV
   }
+
   componentDidMount() {
     this.setState({
       helpDetailNodes: [
@@ -66,6 +65,10 @@ class HelpDetail extends Component {
     })
   }
 
+  config = {
+    navigationBarTitleText: '帮助中心',
+  }
+  
   render() {
     return (
       <View className='article-detail'>

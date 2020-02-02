@@ -2,9 +2,7 @@ import Taro, { Component } from '@tarojs/taro'
 import { View, RichText } from '@tarojs/components'
 
 class AttentionDetail extends Component {
-    config = {
-        navigationBarTitleText: '上课须知',
-    }
+
     constructor() {
         super(...arguments)
         this.state = {
@@ -85,7 +83,9 @@ class AttentionDetail extends Component {
             ]
         })
     }
-
+    config = {
+        navigationBarTitleText: '上课须知',
+    }
     render() {
         return (
             <View className='article-detail'>

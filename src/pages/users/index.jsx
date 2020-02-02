@@ -1,7 +1,5 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View, Text, Image, Navigator } from '@tarojs/components'
-import './index.scss'
-
+import { View, Button, Text, Image, Navigator } from '@tarojs/components'
 import usersBg from '@/src/assets/images/users/users_bg.png'
 import arrowRight from '@/src/assets/images/other/arrow_right.png'
 import help from '@/src/assets/images/users/icon/help.png'
@@ -14,10 +12,10 @@ import avatar from '@/src/assets/images/other/avatar.png'
 
 import { showShareMenu } from '@/src/utils/index'
 
+import styles from './index.module.scss'
+
 class Users extends Component {
-    config = {
-        navigationBarTitleText: '我的',
-    }
+
     constructor() {
         super(...arguments)
         this.env = process.env.TARO_ENV
@@ -26,7 +24,9 @@ class Users extends Component {
     componentDidMount() {
         showShareMenu() // 开启页面分享按钮
     }
-
+    config = {
+        navigationBarTitleText: '我的',
+    }
     onShowContact() {
         Taro.makePhoneCall({
             phoneNumber: '4008034725'
@@ -43,7 +43,7 @@ class Users extends Component {
                 cancelColor: '#7f7f7f',
                 confirmText: '知道了',
                 confirmColor: '#7d4c9f',
-                success(modalRes) {
+                success() {
                     // if (modalRes.confirm) {
                     //   Taro.openSetting({
                     //     success(data) {
@@ -90,170 +90,162 @@ class Users extends Component {
     render() {
 
         return (
-            <View className='users'>
-                <Image src={usersBg} className='users__bg' />
-                <View className='users__avatarUrl'>
-                    <Image src={avatar} className='users__avatarUrl-img' />
+            <View className={styles['users']}>
+                <Image src={usersBg} className={styles['users__bg']} />
+                <View className={styles['users__avatarUrl']}>
+                    <Image src={avatar} className={styles['users__avatarUrl-img']} />
                 </View>
-                <View className='users-card'>
-                    <View className='users-card__username'>
-                        <Text className='users-card__text-title'>
+                <View className={styles['users-card']}>
+                    <View className={styles['users-card__username']}>
+                        <Text className={styles['users-card__text-title']}>
                             小朋友
                         </Text>
                     </View>
                 </View>
-                <View className='users-link'>
-                    <Navigator url='/pages/index/message_list' className='index__Navigator'>
-                        <View className='users-link__item'>
-                            <View className='users-link__icon'>
-                                <Image src={message} className='users-link__icon-help' />
+                <View className={styles['users-link']}>
+                    <Navigator url='/pages/index/message_list' className={styles['index__Navigator']}>
+                        <View className={styles['users-link__item']}>
+                            <View className={styles['users-link__icon']}>
+                                <Image src={message} className={styles['users-link__icon-help']} />
                             </View>
-                            <View className='users-link__title'>
-                                <Text className='users-link__title-text'>消息中心</Text>
+                            <View className={styles['users-link__title']}>
+                                <Text className={styles['users-link__title-text']}>消息中心</Text>
                             </View>
-                            <View className='users-link__subtitle'>
-                                <Text className='users-link__subtitle-text'></Text>
+                            <View className={styles['users-link__subtitle']}>
+                                <Text className={styles['users-link__subtitle-text']}></Text>
                             </View>
-                            <View className='users-link__arrow'>
-                                <Image src={arrowRight} className='users-link__arrow--active' />
+                            <View className={styles['users-link__arrow']}>
+                                <Image src={arrowRight} className={styles['users-link__arrow--active']} />
                             </View>
                         </View>
                     </Navigator>
-                    <Navigator url='/pages/index/notice_list' className='index__Navigator'>
-                        <View className='users-link__item'>
-                            <View className='users-link__icon'>
-                                <Image src={notice} className='users-link__icon-help' />
+                    <Navigator url='/pages/index/notice_list' className={styles['index__Navigator']}>
+                        <View className={styles['users-link__item']}>
+                            <View className={styles['users-link__icon']}>
+                                <Image src={notice} className={styles['users-link__icon-help']} />
                             </View>
-                            <View className='users-link__title'>
-                                <Text className='users-link__title-text'>公告中心</Text>
+                            <View className={styles['users-link__title']}>
+                                <Text className={styles['users-link__title-text']}>公告中心</Text>
                             </View>
-                            <View className='users-link__subtitle'>
-                                <Text className='users-link__subtitle-text'></Text>
+                            <View className={styles['users-link__subtitle']}>
+                                <Text className={styles['users-link__subtitle-text']}></Text>
                             </View>
-                            <View className='users-link__arrow'>
-                                <Image src={arrowRight} className='users-link__arrow--active' />
+                            <View className={styles['users-link__arrow']}>
+                                <Image src={arrowRight} className={styles['users-link__arrow--active']} />
                             </View>
                         </View>
 
                     </Navigator>
-                    <Navigator url='/pages/webview/help' className='index__Navigator'>
-                        <View className='users-link__item'>
-                            <View className='users-link__icon'>
-                                <Image src={help} className='users-link__icon-help' />
+                    <Navigator url='/pages/webview/help' className={styles['index__Navigator']}>
+                        <View className={styles['users-link__item']}>
+                            <View className={styles['users-link__icon']}>
+                                <Image src={help} className={styles['users-link__icon-help']} />
                             </View>
-                            <View className='users-link__title'>
-                                <Text className='users-link__title-text'>帮助中心</Text>
+                            <View className={styles['users-link__title']}>
+                                <Text className={styles['users-link__title-text']}>帮助中心</Text>
                             </View>
-                            <View className='users-link__arrow'>
-                                <Image src={arrowRight} className='users-link__arrow--active' />
+                            <View className={styles['users-link__arrow']}>
+                                <Image src={arrowRight} className={styles['users-link__arrow--active']} />
                             </View>
                         </View>
                     </Navigator>
-                    <Navigator url='/pages/users/setting' className='index__Navigator'>
-                        <View className='users-link__item'>
-                            <View className='users-link__icon'>
-                                <Image src={setting} className='users-link__icon-help' />
+                    <Navigator url='/pages/users/setting' className={styles['index__Navigator']}>
+                        <View className={styles['users-link__item']}>
+                            <View className={styles['users-link__icon']}>
+                                <Image src={setting} className={styles['users-link__icon-help']} />
                             </View>
-                            <View
-                                className='users-link__title'
-                            >
-                                <Text className='users-link__title-text'>设置</Text>
+                            <View className={styles['users-link__title']}>
+                                <Text className={styles['users-link__title-text']}>设置</Text>
                             </View>
-                            <View className='users-link__arrow'>
-                                <Image src={arrowRight} className='users-link__arrow--active' />
+                            <View className={styles['users-link__arrow']}>
+                                <Image src={arrowRight} className={styles['users-link__arrow--active']} />
                             </View>
                         </View>
                     </Navigator >
 
                     {this.env === 'weapp' ? (
-                        <View className='users-link__item'>
-                            <View className='users-link__icon'>
-                                <Image src={customer} className='users-link__icon-help' />
+                        <View className={styles['users-link__item']}>
+                            <View className={styles['users-link__icon']}>
+                                <Image src={customer} className={styles['users-link__icon-help']} />
                             </View>
                             <View>
-                                <View className='users-link__title'>
-                                    <Text className='users-link__title-text'>在线客服 </Text>
+                                <View className={styles['users-link__title']}>
+                                    <Text className={styles['users-link__title-text']}>在线客服 </Text>
                                 </View>
-                                <View className='users-link__subtitle'>
+                                <View className={styles['users-link__subtitle']}>
                                     <contact-button> </contact-button>
                                 </View>
                             </View>
-                            <View className='users-link__arrow'>
-                                <Image src={arrowRight} className='users-link__arrow--active' />
+                            <View className={styles['users-link__arrow']}>
+                                <Image src={arrowRight} className={styles['users-link__arrow--active']} />
                             </View>
                         </View>
                     ) : this.env === 'swan' ? (
-                        <View className='users-link__item'>
-                            <View className='users-link__icon'>
-                                <Image src={customer} className='users-link__icon-help' />
+                        <View className={styles['users-link__item']}>
+                            <View className={styles['users-link__icon']}>
+                                <Image src={customer} className={styles['users-link__icon-help']} />
                             </View>
                             <View>
-                                <View className='users-link__title'>
-                                    <Text className='users-link__title-text'>在线客服 </Text>
+                                <View className={styles['users-link__title']}>
+                                    <Text className={styles['users-link__title-text']}>在线客服 </Text>
                                 </View>
-                                <View className='users-link__subtitle'>
-                                    <button size='mini' plain open-type="contact" >客服</button>
+                                <View className={styles['users-link__subtitle']}>
+                                    <Button size='mini' plain open-type='contact' >客服</Button>
                                 </View>
                             </View>
-                            <View className='users-link__arrow'>
-                                <Image src={arrowRight} className='users-link__arrow--active' />
+                            <View className={styles['users-link__arrow']}>
+                                <Image src={arrowRight} className={styles['users-link__arrow--active']} />
                             </View>
                         </View>
                     ) : (this.env === 'alipay' ? (
-                        <View className='users-link__item'>
-                            <View className='users-link__icon'>
-                                <Image src={customer} className='users-link__icon-help' />
+                        <View className={styles['users-link__item']}>
+                            <View className={styles['users-link__icon']}>
+                                <Image src={customer} className={styles['users-link__icon-help']} />
                             </View>
-                            <View onClick={this.onShowContact.bind(this)}
-                            >
-                                <View
-                                    className='users-link__title'
-                                >
-                                    <Text className='users-link__title-text'>客服电话</Text>
+                            <View onClick={this.onShowContact.bind(this)}>
+                                <View className={styles['users-link__title']}>
+                                    <Text className={styles['users-link__title-text']}>客服电话</Text>
                                 </View>
-                                <View className='users-link__subtitle'>
-                                    <Text className='users-link__subtitle-text'>400-803-4725</Text>
+                                <View className={styles['users-link__subtitle']}>
+                                    <Text className={styles['users-link__subtitle-text']}>400-803-4725</Text>
                                 </View>
                             </View>
-                            <View className='users-link__arrow'>
-                                <Image src={arrowRight} className='users-link__arrow--active' />
+                            <View className={styles['users-link__arrow']}>
+                                <Image src={arrowRight} className={styles['users-link__arrow--active']} />
                             </View>
                         </View>
                     ) : (null)
                             )}
 
-
                     {this.env === 'qq' ? (
-                        <View className='users-link__item' onClick={this.onShareAppMessage.bind(this)}>
-                            <View className='users-link__icon'>
-                                <Image src={praise} className='users-link__icon-help' />
+                        <View className={styles['users-link__item']} onClick={this.onShareAppMessage.bind(this)}>
+                            <View className={styles['users-link__icon']}>
+                                <Image src={praise} className={styles['users-link__icon-help']} />
                             </View>
-                            <View
-                                className='users-link__title'
-                            >
-                                <Text className='users-link__title-text'>分享给小伙伴</Text>
+                            <View className={styles['users-link__title']}>
+                                <Text className={styles['users-link__title-text']}>分享给小伙伴</Text>
                             </View>
-                            <View className='users-link__subbutton--qq'>
-                                <button size='mini' type='default' open-type="share" >去分享</button>
+                            <View className={styles['users-link__subbutton--qq']}>
+                                <Button size='mini' type='default' open-type='share' >去分享</Button>
                             </View>
-                            <View className='users-link__arrow'>
-                                <Image src={arrowRight} className='users-link__arrow--active' />
+                            <View className={styles['users-link__arrow']}>
+                                <Image src={arrowRight} className={styles['users-link__arrow--active']} />
                             </View>
                         </View >
-                        // <View className='users-link__item' onClick={this.onShareAppMessage.bind(this)}>
-                        //     <View className='users-link__icon'>
-                        //         <Image src={praise} className='users-link__icon-help' />
+                        // <View className={styles['users-link__item' onClick={this.onShareAppMessage.bind(this)}>
+                        //     <View className={styles['users-link__icon']}>
+                        //         <Image src={praise} className={styles['users-link__icon-help']} />
                         //     </View>
                         //     <View
-                        //         className='users-link__title'
+                        //         className={styles['users-link__title'
                         //     >
-                        //         <Text className='users-link__title-text'>分享给小伙伴</Text>
+                        //         <Text className={styles['users-link__title-text']}>分享给小伙伴</Text>
                         //     </View>
-                        //     <View className='users-link__subbutton'>
-                        //         <button size='mini' plain open-type="share" >去分享</button>
+                        //     <View className={styles['users-link__subbutton']}>
+                        //         <Button size='mini' plain open-type='share' >去分享</Button>
                         //     </View>
-                        //     <View className='users-link__arrow'>
-                        //         <Image src={arrowRight} className='users-link__arrow--active' />
+                        //     <View className={styles['users-link__arrow']}>
+                        //         <Image src={arrowRight} className={styles['users-link__arrow--active']} />
                         //     </View>
                         // </View >
                     ) : (
@@ -261,8 +253,6 @@ class Users extends Component {
                         )
 
                     }
-
-
                 </View >
             </View >
         )

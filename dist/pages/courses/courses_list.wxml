@@ -1,0 +1,39 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles['courses-list']}}">
+        <view class="{{styles['courses-list-header']}}">
+            <image src="{{coursesListBg}}" class="{{styles['courses-list__bg']}}"></image>
+            <view class="{{styles['courses-list-header__intro-maintitle']}}"><text class="{{styles['courses-list-header__maintitle-text']}}">课程 {{courseId}}</text>
+            </view>
+            <view class="{{styles['courses-list-header__intro-subtitle']}}"><text class="{{styles['courses-list-header__subtitle-text']}}">旨在能让初学者创建计算机程序，在这个过程中帮助他们学习如何与他人进行协作、提高解决问题的能力，并通过不断努力完成艰巨的任务。</text>
+            </view>
+        </view>
+        <view class="{{styles['courses-list-item__container']}}">
+            <navigator url="/pages/webview/courses_detail?courseId=1&stageId=2&classId=1" class="{{styles['index__Navigator']}}">
+                <view class="{{styles['courses-list-item']}}">
+                    <view class="{{styles['courses-list-item__thumb']}}">
+                        <image src="https://studio.code.org/blockly/media/skins/jigsaw/smiley.png" class="{{styles['courses-list-item__thumb-img']}}"></image>
+                    </view>
+                    <view class="{{styles['courses-list-item__intro-container']}}">
+                        <view class="{{styles['courses-list-item__intro-maintitle']}}"><text class="{{styles['courses-list-item__maintitle']}}">游戏实验室</text>
+                        </view>
+                        <view class="{{styles['courses-list-item__intro']}}"><text class="{{styles['courses-list-item__text']}}">总共 12 小节</text>
+                        </view>
+                    </view>
+                </view>
+            </navigator>
+            <navigator url="/pages/webview/courses_detail?courseId=1&stageId=3&classId=1" class="{{styles['index__Navigator']}}">
+                <view class="{{styles['courses-list-item']}}">
+                    <view class="{{styles['courses-list-item__thumb']}}">
+                        <image src="https://studio.code.org/blockly/media/skins/jigsaw/snail.png" class="{{styles['courses-list-item__thumb-img']}}"></image>
+                    </view>
+                    <view class="{{styles['courses-list-item__intro-container']}}">
+                        <view class="{{styles['courses-list-item__intro-maintitle']}}"><text class="{{styles['courses-list-item__maintitle']}}">游戏实验室</text>
+                        </view>
+                        <view class="{{styles['courses-list-item__intro']}}"><text class="{{styles['courses-list-item__text']}}">总共 12 小节</text>
+                        </view>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</block>

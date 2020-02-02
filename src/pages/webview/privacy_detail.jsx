@@ -2,9 +2,7 @@ import Taro, { Component } from '@tarojs/taro'
 import { View, RichText } from '@tarojs/components'
 
 class PrivacyDetail extends Component {
-    config = {
-        navigationBarTitleText: '隐私政策',
-    }
+
     constructor() {
         super(...arguments)
         this.state = {
@@ -93,7 +91,9 @@ class PrivacyDetail extends Component {
             ]
         })
     }
-
+    config = {
+        navigationBarTitleText: '隐私政策',
+    }
     render() {
         return (
             <View className='article-detail'>

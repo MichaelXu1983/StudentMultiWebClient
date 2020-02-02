@@ -1,0 +1,29 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles['notice']}}">
+        <view class="{{styles['notice-item__container']}}">
+            <navigator url="/pages/webview/notice_detail" class="{{styles['index__Navigator']}}">
+                <view class="{{styles['notice-item']}}">
+                    <block wx:if="{{isNoticeRead === 0}}">
+                        <view class="{{styles['notice-item__status']}}"></view>
+                    </block>
+                    <view class="{{styles['notice-item__intro-container']}}">
+                        <view class="{{styles['notice-item__maintitle']}}"><text class="{{styles['notice-item__maintitle-text']}}">袋小鼠爱编程应用上线啦</text>
+                        </view>
+                        <view class="{{styles['notice-item__intro']}}"><text class="{{styles['notice-item__date-text']}}">2019-08-11 09:30</text>
+                        </view>
+                    </view>
+                    <view class="{{styles['notice-item__pic']}}">
+                        <image src="{{noticePic}}" class="{{styles['notice-item__pic-img']}}"></image>
+                    </view>
+                    <view class="{{styles['notice-item__link']}}">
+                        <view class="{{styles['notice-item__link-left']}}"><text class="{{styles['notice-item__link-text']}}">查看详情</text>
+                        </view>
+                        <view class="{{styles['notice-item__link-right']}}">
+                            <image src="{{arrowRight}}" class="{{styles['notice-item__link-img']}}"></image>
+                        </view>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</block>

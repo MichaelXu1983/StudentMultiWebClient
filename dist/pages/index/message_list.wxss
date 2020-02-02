@@ -1,0 +1,75 @@
+/*  imported from message_list.module.scss  */
+.message_list-module__message___1_M1c {
+  width: 100%;
+  min-height: 100%; }
+
+.message_list-module__message-item__container___YGWzE {
+  position: relative;
+  z-index: 99;
+  width: 90%;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 50rpx 0; }
+
+.message_list-module__message-item___3fceJ {
+  position: relative;
+  margin-bottom: 50rpx;
+  background-color: #f3f3f3;
+  padding: 30rpx;
+  border-radius: 20rpx; }
+
+.message_list-module__message-item__intro-container___1K65u {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.message_list-module__message-item__intro___QtfQZ {
+  line-height: 38rpx;
+  padding-left: 20rpx; }
+
+.message_list-module__message-item__thumb___2H7zf {
+  margin-top: 20rpx;
+  line-height: 40rpx; }
+
+.message_list-module__message-item__intro-maintitle___1W4t2 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: hidden;
+  line-height: 50rpx; }
+
+.message_list-module__message-item__maintitle___4WtMO {
+  color: #70449e;
+  font-size: 34rpx;
+  line-height: 50rpx; }
+
+.message_list-module__message-item__subtitle___eyg-g {
+  color: #444;
+  font-size: 30rpx; }
+
+.message_list-module__message-item__text___EntVF {
+  color: #777;
+  font-size: 26rpx;
+  line-height: 44rpx; }
+
+.message_list-module__message-item__date-text___XTlsB {
+  color: #9b9b9b;
+  font-size: 26rpx;
+  line-height: 44rpx; }
+
+.message_list-module__message-item__status___3sT5t {
+  position: absolute;
+  top: 14rpx;
+  left: 14rpx;
+  z-index: 89;
+  width: 20rpx;
+  height: 20rpx;
+  background-color: #f64272;
+  border-radius: 10rpx; }

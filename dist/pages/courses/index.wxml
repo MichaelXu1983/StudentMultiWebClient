@@ -1,0 +1,61 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles['courses']}}">
+        <view class="{{styles['courses-header']}}">
+            <image src="{{coursesBg}}" class="{{styles['courses__bg']}}"></image>
+            <view class="{{styles['courses-header__intro-maintitle']}}"><text class="{{styles['courses-header__maintitle-text']}}">计算机科学基础</text>
+            </view>
+            <view class="{{styles['courses-header__intro-subtitle']}}"><text class="{{styles['courses-header__subtitle-text']}}">通过这些面向 4-18 岁年龄段的课程，可以让孩子在动手创造益智游戏过程中，学习到编程思维，这将对他今后的数学、物理、化学等等学科产生积极的影响！</text>
+            </view>
+        </view>
+        <view class="{{styles['courses-item__container']}}">
+            <navigator url="/pages/webview/courses_detail?courseId=1&stageId=2&classId=2" class="{{styles['index__Navigator']}}">
+                <view class="{{styles['courses-item']}}">
+                    <view class="{{styles['courses-item__thumb']}}">
+                        <view class="{{styles['courses-item__thumb-loading']}}"></view>
+                        <image src="https://studio.code.org/shared/images/courses/logo_tall_course1.jpg" class="{{styles['courses-item__thumb-img']}}"></image>
+                    </view>
+                    <view class="{{styles['courses-item__maintitle']}}"><text class="{{styles['courses-item__maintitle-text']}}">课程 1<text class="{{styles['courses-item__subscript']}}">（4-6岁）</text></text>
+                    </view>
+                    <view class="{{styles['courses-item__subtitle']}}"><text class="{{styles['courses-item__subtitle-text']}}">为较小的读者准备的计算机科学简介</text>
+                    </view>
+                </view>
+            </navigator>
+            <navigator url="/pages/webview/courses_detail?courseId=2&stageId=1&classId=2" class="{{styles['index__Navigator']}}">
+                <view class="{{styles['courses-item']}}">
+                    <view class="{{styles['courses-item__thumb']}}">
+                        <view class="{{styles['courses-item__thumb-loading']}}"></view>
+                        <image src="https://studio.code.org/shared/images/courses/logo_tall_course2.jpg" class="{{styles['courses-item__thumb-img']}}"></image>
+                    </view>
+                    <view class="{{styles['courses-item__maintitle']}}"><text class="{{styles['courses-item__maintitle-text']}}">课程 2<text class="{{styles['courses-item__subscript']}}">（6岁以上）</text></text>
+                    </view>
+                    <view class="{{styles['courses-item__subtitle']}}"><text class="{{styles['courses-item__subtitle-text']}}">为可以阅读的学生准备的计算机科学简介</text>
+                    </view>
+                </view>
+            </navigator>
+            <navigator url="/pages/webview/courses_detail?courseId=3&stageId=1&classId=2" class="{{styles['index__Navigator']}}">
+                <view class="{{styles['courses-item']}}">
+                    <view class="{{styles['courses-item__thumb']}}">
+                        <view class="{{styles['courses-item__thumb-loading']}}"></view>
+                        <image src="https://studio.code.org/shared/images/courses/logo_tall_course3.jpg" class="{{styles['courses-item__thumb-img']}}"></image>
+                    </view>
+                    <view class="{{styles['courses-item__maintitle']}}"><text class="{{styles['courses-item__maintitle-text']}}">课程 3<text class="{{styles['courses-item__subscript']}}">（8-18岁）</text></text>
+                    </view>
+                    <view class="{{styles['courses-item__subtitle']}}"><text class="{{styles['courses-item__subtitle-text']}}">在创建游戏和交互的故事时，更深入的学习编程，这是课程2的延续</text>
+                    </view>
+                </view>
+            </navigator>
+            <navigator url="/pages/webview/courses_detail?courseId=3&stageId=19&classId=2" class="{{styles['index__Navigator']}}">
+                <view class="{{styles['courses-item']}}">
+                    <view class="{{styles['courses-item__thumb']}}">
+                        <view class="{{styles['courses-item__thumb-loading']}}"></view>
+                        <image src="https://studio.code.org/shared/images/courses/logo_tall_course4.jpg" class="{{styles['courses-item__thumb-img']}}"></image>
+                    </view>
+                    <view class="{{styles['courses-item__maintitle']}}"><text class="{{styles['courses-item__maintitle-text']}}">课程 4<text class="{{styles['courses-item__subscript']}}">（10-18岁）</text></text>
+                    </view>
+                    <view class="{{styles['courses-item__subtitle']}}"><text class="{{styles['courses-item__subtitle-text']}}">通过计数循环和带有参数的函数等新概念来建立更复杂的程序，这是课程3的后续</text>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</block>

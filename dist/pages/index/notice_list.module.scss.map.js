@@ -1,0 +1,21 @@
+module.exports = {
+  "notice": "notice_list-module__notice___3ti5u",
+  "notice-item__container": "notice_list-module__notice-item__container___6fqh4",
+  "notice-item": "notice_list-module__notice-item___3eaDN",
+  "notice-item__intro-container": "notice_list-module__notice-item__intro-container___1xsyy",
+  "notice-item__intro": "notice_list-module__notice-item__intro___2Mx6C",
+  "notice-item__thumb": "notice_list-module__notice-item__thumb___3X1To",
+  "notice-item__maintitle": "notice_list-module__notice-item__maintitle___s5j7S",
+  "notice-item__maintitle-text": "notice_list-module__notice-item__maintitle-text___3GIp9",
+  "notice-item__subtitle": "notice_list-module__notice-item__subtitle___2mwZ2",
+  "notice-item__text": "notice_list-module__notice-item__text___ZTRHY",
+  "notice-item__link": "notice_list-module__notice-item__link___1uLFE",
+  "notice-item__link-left": "notice_list-module__notice-item__link-left___3Vv0D",
+  "notice-item__link-right": "notice_list-module__notice-item__link-right___NrbPU",
+  "notice-item__link-img": "notice_list-module__notice-item__link-img___3673W",
+  "notice-item__link-text": "notice_list-module__notice-item__link-text___dtQ22",
+  "notice-item__date-text": "notice_list-module__notice-item__date-text___2Lc6E",
+  "notice-item__status": "notice_list-module__notice-item__status___2hF46",
+  "notice-item__pic": "notice_list-module__notice-item__pic___27RSb",
+  "notice-item__pic-img": "notice_list-module__notice-item__pic-img___1ch-u"
+};

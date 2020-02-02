@@ -1,10 +1,8 @@
+# 袋小鼠爱编程
 ## 简介
 本项目是使用 [Taro](https://taro.aotu.io/) 开发的应用，目前支持 H5 和微信、QQ、百度、支付宝、字节跳动小程序。  
 该应用主要是面对 4-18 岁青少儿在线编程课程的学习。核心课程来自于 Code.org&reg;，它是一家非营利组织，致力于通过在更多学校推出计算机科学，以及增加女性和代表性不足的学生的参与度来扩大计算机科学的参与。他们很自豪能够在全球范围内完全免费提供他们的所有课程和课程内容，而无需任何必要的合作伙伴关系来在您的学校或组织中使用我们的材料！而我们也基于此种精神，致力于扩大 4-18 岁中国孩子学习计算机科学的机会，尽可能帮助他们从小建立编程思维，从而培养解决问题的能力。  
 我们的愿景是：让中国每个学校的每个学生都能像语文、数学、外语一样学习计算机科学。
-
-## 技术栈
-Taro + Taro UI + Redux + Webpack + ES6
 
 ## 截图  
 
@@ -27,8 +25,9 @@ Taro + Taro UI + Redux + Webpack + ES6
 3. [使用Tarojs](#使用Tarojs)
     * [创建项目](#创建项目)
     * [配置项目](#配置项目)
+    * [开启CSS Modules](#开启CSSModules)
     * [设置alias别名](#设置alias别名)
-
+    * [自定义主题](#自定义主题)
 
 ## <a name="环境安装">环境安装</a>
 ### <a name="安装Nvm">安装Nvm</a>
@@ -109,7 +108,7 @@ yarn global add @tarojs/cli@latest
 ### <a name="创建项目">创建项目</a>
 ```
 # 初始化项目，并按提示输入项目相关信息
-taro init StudentMultiWebClient
+taro init student-multi-web-client
 ```
 
 ### <a name="配置项目">配置项目</a>
@@ -125,27 +124,27 @@ Need help? Go and open issue: https://github.com/NervJS/taro/issues/new
 ? 请选择 CSS 预处理器（Sass/Less/Stylus） Sass
 ? 请选择模板 redux
 
-✔ 创建项目: StudentMultiWebClient
-✔ 创建文件: StudentMultiWebClient/.editorconfig
-✔ 创建文件: StudentMultiWebClient/.eslintrc
-✔ 创建文件: StudentMultiWebClient/.gitignore
-✔ 创建文件: StudentMultiWebClient/package.json
-✔ 创建文件: StudentMultiWebClient/project.config.json
-✔ 创建文件: StudentMultiWebClient/config/dev.js
-✔ 创建文件: StudentMultiWebClient/config/index.js
-✔ 创建文件: StudentMultiWebClient/config/prod.js
-✔ 创建文件: StudentMultiWebClient/src/app.scss
-✔ 创建文件: StudentMultiWebClient/src/app.jsx
-✔ 创建文件: StudentMultiWebClient/src/index.html
-✔ 创建文件: StudentMultiWebClient/src/actions/counter.js
-✔ 创建文件: StudentMultiWebClient/src/constants/counter.js
-✔ 创建文件: StudentMultiWebClient/src/reducers/counter.js
-✔ 创建文件: StudentMultiWebClient/src/reducers/index.js
-✔ 创建文件: StudentMultiWebClient/src/store/index.js
-✔ 创建文件: StudentMultiWebClient/src/pages/index/index.scss
-✔ 创建文件: StudentMultiWebClient/src/pages/index/index.jsx
+✔ 创建项目: student-multi-web-client
+✔ 创建文件: student-multi-web-client/.editorconfig
+✔ 创建文件: student-multi-web-client/.eslintrc
+✔ 创建文件: student-multi-web-client/.gitignore
+✔ 创建文件: student-multi-web-client/package.json
+✔ 创建文件: student-multi-web-client/project.config.json
+✔ 创建文件: student-multi-web-client/config/dev.js
+✔ 创建文件: student-multi-web-client/config/index.js
+✔ 创建文件: student-multi-web-client/config/prod.js
+✔ 创建文件: student-multi-web-client/src/app.scss
+✔ 创建文件: student-multi-web-client/src/app.jsx
+✔ 创建文件: student-multi-web-client/src/index.html
+✔ 创建文件: student-multi-web-client/src/actions/counter.js
+✔ 创建文件: student-multi-web-client/src/constants/counter.js
+✔ 创建文件: student-multi-web-client/src/reducers/counter.js
+✔ 创建文件: student-multi-web-client/src/reducers/index.js
+✔ 创建文件: student-multi-web-client/src/store/index.js
+✔ 创建文件: student-multi-web-client/src/pages/index/index.scss
+✔ 创建文件: student-multi-web-client/src/pages/index/index.jsx
 
-✔ cd StudentMultiWebClient, 执行 git init
+✔ cd student-multi-web-client, 执行 git init
 ✔ 安装成功
 warning @tarojs/webpack-runner > dart-sass@1.17.3: use the "sass" package instead
 warning @tarojs/webpack-runner > webpack-format-messages > kleur@2.0.2: Please upgrade to kleur@3 or migrate to 'ansi-colors' if you prefer the old syntax. Visit <https://github.com/lukeed/kleur/releases/tag/v3.0.0\> for migration path(s).
@@ -159,8 +158,28 @@ info No lockfile found.
 success Saved lockfile.
 Done in 60.08s.
 
-创建项目 StudentMultiWebClient 成功！
-请进入项目目录 StudentMultiWebClient 开始工作吧！😝
+创建项目 student-multi-web-client 成功！
+请进入项目目录 student-multi-web-client 开始工作吧！😝
+```  
+
+### <a name="开启CSSModules">开启 CSS Modules</a>
+[传送门](https://taro-docs.jd.com/taro/docs/css-modules.html)  
+
+```bash
+vim index.module.scss
+
+...
+.text {
+  color: #ff0;
+}
+
+:global {
+  .taro-text {
+    color: #ff0;
+  }
+}
+...
+
 ```  
 
 ### <a name="设置alias别名">设置 alias 别名</a>
@@ -184,10 +203,6 @@ copy: {
 ...
 ```  
 
-### <a name="开启CSSModules">开启 CSS Modules</a>
-> RN 端不支持
-[传送门](https://nervjs.github.io/taro/docs/css-modules.html)  
-
 ### <a name="自定义主题">自定义主题</a>
 > RN 端不支持
 [传送门](https://nervjs.github.io/taro/docs/css-modules.html)  
@@ -202,6 +217,3 @@ cp custom-theme.scss src
 vim custom-theme.scss // 引入 Taro UI 默认样式：@import "~taro-ui/dist/style/index.scss"
 vim app.jsx // 引入 Taro UI 主题样式：import './custom-theme.scss'
 ```  
-
-### <a name="应用框架配置">应用框架配置</a>
-[传送门](https://taro-docs.jd.com/taro/docs/tutorial.html)  

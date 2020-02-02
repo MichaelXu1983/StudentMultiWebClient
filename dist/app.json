@@ -1,0 +1,81 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/notice_list",
+    "pages/index/message_list",
+    "pages/courses/index",
+    "pages/courses/courses_list",
+    "pages/users/index",
+    "pages/users/setting",
+    "pages/users/help_list",
+    "pages/users/help_detail",
+    "pages/webview/courses_detail",
+    "pages/webview/attention",
+    "pages/webview/guide",
+    "pages/webview/notice",
+    "pages/webview/about",
+    "pages/webview/help",
+    "pages/webview/notice_detail",
+    "pages/webview/attention_detail",
+    "pages/webview/guide_detail",
+    "pages/webview/about_detail",
+    "pages/webview/update_notice",
+    "pages/webview/update_notice_detail",
+    "pages/webview/update_time",
+    "pages/webview/update_time_detail",
+    "pages/webview/agreement",
+    "pages/webview/agreement_detail",
+    "pages/webview/privacy",
+    "pages/webview/privacy_detail"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "袋小鼠爱编程",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "default",
+    "backgroundColor": "#f7f7f9",
+    "backgroundColorTop": "#ffffff",
+    "backgroundColorBottom": "#ffffff",
+    "enablePullDownRefresh": false,
+    "backgroundTextStyle": "light",
+    "onReachBottomDistance": 200,
+    "pageOrientation": "auto",
+    "disableSwipeBack": false
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./assets/images/tab_bar/home.png",
+        "selectedIconPath": "./assets/images/tab_bar/home_select.png"
+      },
+      {
+        "pagePath": "pages/courses/index",
+        "text": "课程",
+        "iconPath": "./assets/images/tab_bar/courses.png",
+        "selectedIconPath": "./assets/images/tab_bar/courses_select.png"
+      },
+      {
+        "pagePath": "pages/users/index",
+        "text": "我的",
+        "iconPath": "./assets/images/tab_bar/users.png",
+        "selectedIconPath": "./assets/images/tab_bar/users_select.png"
+      }
+    ],
+    "position": "bottom",
+    "custom": false,
+    "color": "#8a8a8a",
+    "selectedColor": "#7d4c9f",
+    "backgroundColor": "#fff",
+    "borderStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 6000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,5 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="article-detail">
+        <rich-text class="article-detail__richtext" nodes="{{helpDetailNodes}}"></rich-text>
+    </view>
+</block>

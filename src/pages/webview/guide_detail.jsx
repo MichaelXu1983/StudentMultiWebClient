@@ -2,9 +2,7 @@ import Taro, { Component } from '@tarojs/taro'
 import { View, RichText } from '@tarojs/components'
 
 class GuideDetail extends Component {
-    config = {
-        navigationBarTitleText: '上课指南',
-    }
+
     constructor() {
         super(...arguments)
         this.state = {
@@ -71,7 +69,9 @@ class GuideDetail extends Component {
             ]
         })
     }
-
+    config = {
+        navigationBarTitleText: '上课指南',
+    }
     render() {
         return (
             <View className='article-detail'>

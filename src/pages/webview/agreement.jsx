@@ -3,15 +3,16 @@ import { WebView } from '@tarojs/components'
 
 
 class Agreement extends Component {
-    config = {
-        navigationBarTitleText: '使用协议',
-    }
+
     constructor() {
         super(...arguments)
         this.state = {
             url: 'https://www.codekid.top/#/pages/webview/agreement_detail'
         }
         this.env = process.env.TARO_ENV
+    }
+    config = {
+        navigationBarTitleText: '使用协议',
     }
     render() {
         return (

@@ -3,9 +3,7 @@ import { WebView } from '@tarojs/components'
 
 
 class CourseDetail extends Component {
-    config = {
-        navigationBarTitleText: '课程',
-    }
+
     constructor() {
         super(...arguments)
         this.state = {
@@ -17,6 +15,9 @@ class CourseDetail extends Component {
         this.setState({
             url: `https://studio.codekid.top/s/course${this.$router.params.courseId}/stage/${this.$router.params.stageId}/puzzle/${this.$router.params.classId}`
         })
+    }
+    config = {
+        navigationBarTitleText: '课程',
     }
     render() {
         return (

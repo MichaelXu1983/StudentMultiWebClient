@@ -1,0 +1,32 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles['message']}}">
+        <view class="{{styles['message-item__container']}}">
+            <block>
+                <block wx:if="{{mesNum === 0}}">
+                    <view class="global-empty">
+                        <view class="global-empty__pic">
+                            <image src="{{noMessage}}" class="global-empty__pic-img"></image>
+                        </view>
+                        <view class="global-empty__intro"><text class="global-empty__text">暂无消息</text>
+                        </view>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view class="{{styles['message-item']}}">
+                        <block wx:if="{{isMesRead === 0}}">
+                            <view class="{{styles['message-item__status']}}"></view>
+                        </block>
+                        <view class="{{styles['message-item__intro-container']}}">
+                            <view class="{{styles['message-item__intro-maintitle']}}"><text class="{{styles['message-item__maintitle']}}">新注册用户畅玩新注册用户畅玩新注册用户畅玩新注册用户畅玩</text>
+                            </view>
+                            <view class="{{styles['message-item__intro']}}"><text class="{{styles['message-item__date-text']}}">2019-08-01 09:30</text>
+                            </view>
+                        </view>
+                        <view class="{{styles['message-item__thumb']}}"><text class="{{styles['message-item__text']}}">只需三步，注册会员，即可试运营期间畅玩只需三步，注册会员，即可试运营期间畅玩只需三步，注册会员，即可试运营期间畅玩</text>
+                        </view>
+                    </view>
+                </block>
+            </block>
+        </view>
+    </view>
+</block>

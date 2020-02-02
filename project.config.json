@@ -1,6 +1,6 @@
 {
 	"miniprogramRoot": "dist/",
-	"projectname": "StudentMultiWebClient",
+	"projectname": "student-multi-web-client",
 	"description": "学生web多端",
 	"appid": "wx40bb0d56af8e4e3c",
 	"setting": {

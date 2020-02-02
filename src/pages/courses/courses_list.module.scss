@@ -28,9 +28,9 @@
 .courses-list-header__intro-subtitle {
   /*  #ifndef  rn  */
   display: -webkit-box;
-  /*  #endif  */
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
+    /*  #endif  */
   overflow: hidden;
   position: relative;
   z-index: 99;
@@ -98,10 +98,10 @@
 
   /*  #ifndef  rn  */
   display: -webkit-box;
-
-  /*  #endif  */
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+  /*  #endif  */
+ 
   overflow: hidden;
   text-align: left;
 }
@@ -109,10 +109,10 @@
   height: 106px;
   /*  #ifndef  rn  */
   display: -webkit-box;
-
-  /*  #endif  */
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  /*  #endif  */
+ 
   overflow: hidden;
 }
 .courses-list-item__maintitle {

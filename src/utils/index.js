@@ -36,15 +36,17 @@ function getSystemInfo() {
 
 function showShareMenu() {
     if (process.env.TARO_ENV === 'qq') {
+        // eslint-disable-next-line no-undef
         qq.showShareMenu({
             showShareItems: ['qq', 'qzone', 'wechatFriends', 'wechatMoment']
         })
     } else if (process.env.TARO_ENV === 'tt') {
+        // eslint-disable-next-line no-undef
         tt.showShareMenu({
-            success(res) {
+            success() {
                 console.log(`showShareMenu 调用成功`);
             },
-            fail(res) {
+            fail() {
                 console.log(`showShareMenu 调用失败`);
             }
         });
