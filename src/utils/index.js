@@ -1,5 +1,4 @@
 import Taro from '@tarojs/taro'
-import '@tarojs/async-await'
 
 function isEmptyObject(obj) {
     if (!obj) {
