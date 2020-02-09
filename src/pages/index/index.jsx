@@ -14,7 +14,7 @@ import noticeIcon from '@/src/assets/images/index/notice.png'
 import ok from '@/src/assets/images/index/ok.png'
 import guide_bg_left from '@/src/assets/images/index/guide_bg_left.png'
 import guide_bg_right from '@/src/assets/images/index/guide_bg_right.png'
-import { showShareMenu } from '@/src/utils/index'
+import { showShareMenu, businessDomain } from '@/src/utils/index'
 import httpRequest from '@/src/utils/request'
 import styles from './index.module.scss'
 
@@ -99,7 +99,7 @@ class Index extends Component {
             {this.state.recomList.map(item => (
               <SwiperItem key={item.id}>
                 <Navigator url={`/pages/webview/recom_detail?source=${item.source}`} className={styles['index-notice__swiper-Navigator']}>
-                  <Image src={'https://www.tdreamer.com'+item.imageUrl} className={styles['index-notice__swiper-img']} />
+                  <Image src={businessDomain + item.imageUrl} className={styles['index-notice__swiper-img']} />
                 </Navigator>
               </SwiperItem>
             ))}
@@ -110,10 +110,10 @@ class Index extends Component {
             <Text className={styles['index__maintitle-text']}>上课指引</Text>
           </View>
           <View className={styles['index-guide__content']}>
-            <Navigator url='/pages/webview/attention' className={styles['index__Navigator']}>
+            <Navigator url='/pages/webview/attention_detail' className={styles['index__Navigator']}>
               <Image src={guide_bg_left} className={styles['index-guide__bg-left']} />
             </Navigator>
-            <Navigator url='/pages/webview/guide' className={styles['index__Navigator']}>
+            <Navigator url='/pages/webview/guide_detail' className={styles['index__Navigator']}>
               <Image src={guide_bg_right} className={styles['index-guide__bg-right']} />
             </Navigator>
           </View>

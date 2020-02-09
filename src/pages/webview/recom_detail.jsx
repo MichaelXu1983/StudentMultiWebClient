@@ -1,5 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import { WebView } from '@tarojs/components'
+import { businessDomain } from '@/src/utils/index'
 
 
 class RecomDetail extends Component {
@@ -7,7 +8,7 @@ class RecomDetail extends Component {
     constructor() {
         super(...arguments)
         this.state = {
-            url: 'https://www.tdreamer.com/channels/154.html'
+            url: businessDomain + '/channels/154.html'
         }
         this.env = process.env.TARO_ENV
     }
