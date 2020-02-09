@@ -40,7 +40,7 @@ class Courses extends Component {
         </View>
         <View className={styles['courses-item__container']}>
           {list.map(item => (
-            <Navigator key={item.id} url={item.source} className={styles['index__Navigator']}>
+            <Navigator key={item.id} url={`/pages/webview/courses_detail?source=${item.source}`} className={styles['index__Navigator']}>
               <View className={styles['courses-item']}>
                 <View className={styles['courses-item__thumb']}>
                   <View className={styles['courses-item__thumb-loading']}></View>

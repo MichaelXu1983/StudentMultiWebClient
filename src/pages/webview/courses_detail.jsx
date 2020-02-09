@@ -7,13 +7,14 @@ class CourseDetail extends Component {
     constructor() {
         super(...arguments)
         this.state = {
-            url: 'https://studio.codekid.top/s/course1/stage/1/puzzle/1'
+            url: 'https://www.tdreamer.com/channels/154.html'
         }
         this.env = process.env.TARO_ENV
     }
     componentWillMount() {
-        this.setState({
-            url: `https://studio.codekid.top/s/course${this.$router.params.courseId}/stage/${this.$router.params.stageId}/puzzle/${this.$router.params.classId}`
+        const { source } = this.$router.params
+        source !== '' && this.setState({
+            url: source
         })
     }
     config = {
