@@ -95,7 +95,7 @@ class Index extends Component {
           <View className={styles['index__maintitle']}>
             <Text className={styles['index__maintitle-text']}>最新推荐</Text>
           </View>
-          <Swiper autoplay circular interval={3000} duration={3000} className={styles['index-notice__swiper']}>
+          <Swiper autoplay circular interval={8000} duration={3000} className={styles['index-notice__swiper']}>
             {this.state.recomList.map(item => (
               <SwiperItem key={item.id}>
                 <Navigator url={`/pages/webview/recom_detail?source=${item.source}`} className={styles['index-notice__swiper-Navigator']}>

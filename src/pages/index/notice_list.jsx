@@ -1,6 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Text, Image, Navigator } from '@tarojs/components'
 import httpRequest from '@/src/utils/request'
+import { businessDomain } from '@/src/utils'
 import arrowRight from '@/src/assets/images/other/arrow_right.png'
 import styles from './notice_list.module.scss'
 
@@ -41,7 +42,7 @@ class Notice extends Component {
                                         <Text className={styles['notice-item__date-text']}>{item.lastEditDate}</Text>
                                     </View>
                                 </View>
-                                <View className={styles['notice-item__pic']}><Image src={item.imageUrl} className={styles['notice-item__pic-img']} /></View>
+                                <View className={styles['notice-item__pic']}><Image src={businessDomain + item.imageUrl} className={styles['notice-item__pic-img']} /></View>
                                 <View className={styles['notice-item__link']}>
                                     <View className={styles['notice-item__link-left']}><Text className={styles['notice-item__link-text']}>查看详情</Text></View>
                                     <View className={styles['notice-item__link-right']}><Image src={arrowRight} className={styles['notice-item__link-img']} />

@@ -1,5 +1,7 @@
 import Taro from '@tarojs/taro'
 
+const businessDomain = 'https://www.tdreamer.com'
+
 function isEmptyObject(obj) {
     if (!obj) {
         return true
@@ -52,6 +54,7 @@ function showShareMenu() {
     }
 }
 export {
+    businessDomain,
     isEmptyObject,
     getSystemInfo,
     showShareMenu,
