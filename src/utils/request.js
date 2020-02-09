@@ -60,7 +60,7 @@ const getBaseUrl = (url) => {
     } else {
         // 生产环境
         if (url.includes('/api/')) {
-            BASE_URL = ''
+            BASE_URL = 'https://www.tdreamer.com'
         } else {
             BASE_URL = ''
         }
