@@ -14,24 +14,26 @@ import noticeIcon from '@/src/assets/images/index/notice.png'
 import ok from '@/src/assets/images/index/ok.png'
 import guide_bg_left from '@/src/assets/images/index/guide_bg_left.png'
 import guide_bg_right from '@/src/assets/images/index/guide_bg_right.png'
-import banner from '@/src/assets/images/tmp/banner.jpg'
 import { showShareMenu } from '@/src/utils/index'
+import httpRequest from '@/src/utils/request'
 import styles from './index.module.scss'
 
 class Index extends Component {
   constructor() {
     super(...arguments)
     this.state = {
-      noticeImg: [
-        'https://zos.alipayobjects.com/rmsportal/IJOtIlfsYdTyaDTRVrLI.png',
-        'https://zos.alipayobjects.com/rmsportal/IJOtIlfsYdTyaDTRVrLI.png',
-      ],
-      hasNewNotice: true,   // 新公告提示红点
-      hasNewMessage: true,  // 新消息提示红点
+      recomList: [],
+      hasNewNotice: false,   // 新公告提示红点
+      hasNewMessage: false,  // 新消息提示红点
     }
     this.env = process.env.TARO_ENV
   }
   componentDidMount() {
+    httpRequest.get('/api/v1/contents/1/172').then(r => {
+      this.setState({
+        recomList: r.value
+      })
+    })
     showShareMenu() // 开启页面分享按钮
   }
   componentWillReceiveProps(nextProps) {
@@ -91,13 +93,13 @@ class Index extends Component {
         </View>
         <View className={styles['index-notice']}>
           <View className={styles['index__maintitle']}>
-            <Text className={styles['index__maintitle-text']}>最新公告</Text>
+            <Text className={styles['index__maintitle-text']}>最新推荐</Text>
           </View>
           <Swiper autoplay circular interval={3000} duration={3000} className={styles['index-notice__swiper']}>
-            {this.state.noticeImg.map(val => (
-              <SwiperItem key={val}>
-                <Navigator url='/pages/webview/notice' className={styles['index-notice__swiper-Navigator']}>
-                  <Image src={banner} className={styles['index-notice__swiper-img']} />
+            {this.state.recomList.map(item => (
+              <SwiperItem key={item.id}>
+                <Navigator url={`/pages/webview/recom_detail?source=${item.source}`} className={styles['index-notice__swiper-Navigator']}>
+                  <Image src={'https://www.tdreamer.com'+item.imageUrl} className={styles['index-notice__swiper-img']} />
                 </Navigator>
               </SwiperItem>
             ))}

@@ -31,6 +31,7 @@ class App extends Component {
       'pages/users/help_list',
       'pages/users/help_detail',
       'pages/webview/courses_detail',
+      'pages/webview/recom_detail',
       'pages/webview/attention',
       'pages/webview/guide',
       'pages/webview/notice',
