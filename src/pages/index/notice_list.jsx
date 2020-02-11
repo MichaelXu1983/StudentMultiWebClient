@@ -17,7 +17,7 @@ class Notice extends Component {
     componentDidMount() {
         httpRequest.get('/api/v1/contents/1/173').then(r => {
             this.setState({
-                list: r.value
+                list: r.data.value
             })
         })
     }

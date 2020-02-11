@@ -15,7 +15,7 @@ class NoticeDetail extends Component {
     const { siteId, channelId, id } = this.$router.params
     httpRequest.get(`/api/v1/contents/${siteId}/${channelId}/${id}`).then(r => {
       this.setState({
-        detailString: r.value.content
+        detailString: r.data.value.content
       })
     })
   }

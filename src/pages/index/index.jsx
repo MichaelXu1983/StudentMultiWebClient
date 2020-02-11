@@ -31,7 +31,7 @@ class Index extends Component {
   componentDidMount() {
     httpRequest.get('/api/v1/contents/1/172').then(r => {
       this.setState({
-        recomList: r.value
+        recomList: r.data.value
       })
     })
     showShareMenu() // 开启页面分享按钮
@@ -47,6 +47,8 @@ class Index extends Component {
   }
 
   render() {
+    const { recomList } = this.state
+    
     return (
       <View className={styles['index']}>
         <Image src={indexBg} className={styles['index__bg']} />
@@ -96,7 +98,7 @@ class Index extends Component {
             <Text className={styles['index__maintitle-text']}>最新推荐</Text>
           </View>
           <Swiper autoplay circular interval={8000} duration={3000} className={styles['index-notice__swiper']}>
-            {this.state.recomList.map(item => (
+            {Array.isArray(recomList) && recomList.length !== 0 && recomList.map(item => (
               <SwiperItem key={item.id}>
                 <Navigator url={`/pages/webview/recom_detail?source=${item.source}`} className={styles['index-notice__swiper-Navigator']}>
                   <Image src={businessDomain + item.imageUrl} className={styles['index-notice__swiper-img']} />

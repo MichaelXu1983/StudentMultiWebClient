@@ -53,7 +53,7 @@ function showShareMenu() {
         });
     }
 }
-export {
+export default {
     businessDomain,
     isEmptyObject,
     getSystemInfo,

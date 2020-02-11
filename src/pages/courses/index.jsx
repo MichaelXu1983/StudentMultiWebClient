@@ -17,7 +17,7 @@ class Courses extends Component {
   componentDidMount() {
     httpRequest.get('/api/v1/contents/1/153').then(r => {
       this.setState({
-        list: r.value
+        list: r.data.value
       })
     })
     showShareMenu() // 开启页面分享按钮
