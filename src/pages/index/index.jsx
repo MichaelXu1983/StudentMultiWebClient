@@ -14,7 +14,7 @@ import noticeIcon from '@/src/assets/images/index/notice.png'
 import ok from '@/src/assets/images/index/ok.png'
 import guide_bg_left from '@/src/assets/images/index/guide_bg_left.png'
 import guide_bg_right from '@/src/assets/images/index/guide_bg_right.png'
-import { showShareMenu, businessDomain } from '@/src/utils/index'
+import { showShareMenu, getGlobalData } from '@/src/utils/index'
 import httpRequest from '@/src/utils/request'
 import styles from './index.module.scss'
 
@@ -101,7 +101,7 @@ class Index extends Component {
             {Array.isArray(recomList) && recomList.length !== 0 && recomList.map(item => (
               <SwiperItem key={item.id}>
                 <Navigator url={`/pages/webview/recom_detail?source=${item.source}`} className={styles['index-notice__swiper-Navigator']}>
-                  <Image src={businessDomain + item.imageUrl} className={styles['index-notice__swiper-img']} />
+                  <Image src={getGlobalData('businessDomain') + item.imageUrl} className={styles['index-notice__swiper-img']} />
                 </Navigator>
               </SwiperItem>
             ))}

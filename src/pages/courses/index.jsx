@@ -1,6 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Image, Text, Navigator } from '@tarojs/components'
-import { businessDomain } from '@/src/utils'
+import { getGlobalData } from '@/src/utils'
 import { showShareMenu } from '@/src/utils/index'
 import httpRequest from '@/src/utils/request'
 import coursesBg from '@/src/assets/images/courses/bg.png'
@@ -45,7 +45,7 @@ class Courses extends Component {
               <View className={styles['courses-item']}>
                 <View className={styles['courses-item__thumb']}>
                   <View className={styles['courses-item__thumb-loading']}></View>
-                  <Image src={businessDomain + item.imageUrl} className={styles['courses-item__thumb-img']} />
+                  <Image src={getGlobalData('businessDomain') + item.imageUrl} className={styles['courses-item__thumb-img']} />
                 </View>
                 <View className={styles['courses-item__maintitle']}>
                   <Text className={styles['courses-item__maintitle-text']}>{item.title}<Text className={styles['courses-item__subscript']}>{item.subTitle}</Text></Text>
