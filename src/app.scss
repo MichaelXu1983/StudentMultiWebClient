@@ -114,6 +114,9 @@ body {
   margin: 20px auto;
 }
 .article-detail__img-block {
+      /*  #ifndef  rn  */
+     display: block;
+      /*  #endif  */
   max-width: 100%;
   margin: 20px auto;
 }
