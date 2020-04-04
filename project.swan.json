@@ -14,11 +14,11 @@
     },
     "host": "baiduboxapp",
     "preview": {
-        "packageId": 503626
+        "packageId": 611378
     },
     "projectname": "StudentMultiWebClient",
     "publish": {
-        "version": "1.1.4.0"
+        "version": "1.2.1.0"
     },
     "setting": {
         "urlCheck": true

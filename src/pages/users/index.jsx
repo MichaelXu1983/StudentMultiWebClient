@@ -5,7 +5,7 @@ import arrowRight from '@/src/assets/images/other/arrow_right.png'
 import help from '@/src/assets/images/users/icon/help.png'
 import customer from '@/src/assets/images/users/icon/customer.png'
 import setting from '@/src/assets/images/users/icon/setting.png'
-import message from '@/src/assets/images/users/icon/message.png'
+import message from '@/src/assets/images/users/icon/crown.png'
 import notice from '@/src/assets/images/users/icon/notice.png'
 import praise from '@/src/assets/images/users/icon/praise.png'
 import avatar from '@/src/assets/images/other/avatar.png'
@@ -109,7 +109,7 @@ class Users extends Component {
                                 <Image src={message} className={styles['users-link__icon-help']} />
                             </View>
                             <View className={styles['users-link__title']}>
-                                <Text className={styles['users-link__title-text']}>消息中心</Text>
+                                <Text className={styles['users-link__title-text']}>官方推荐</Text>
                             </View>
                             <View className={styles['users-link__subtitle']}>
                                 <Text className={styles['users-link__subtitle-text']}></Text>
@@ -149,7 +149,7 @@ class Users extends Component {
                             </View>
                         </View>
                     </Navigator>
-                    <Navigator url='/pages/users/setting' className={styles['index__Navigator']}>
+                    <Navigator url='/pages/webview/setting' className={styles['index__Navigator']}>
                         <View className={styles['users-link__item']}>
                             <View className={styles['users-link__icon']}>
                                 <Image src={setting} className={styles['users-link__icon-help']} />
