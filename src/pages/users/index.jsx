@@ -103,7 +103,7 @@ class Users extends Component {
                     </View>
                 </View>
                 <View className={styles['users-link']}>
-                    <Navigator url='/pages/index/message_list' className={styles['index__Navigator']}>
+                    <Navigator url='/pages/index/recomm_list' className={styles['index__Navigator']}>
                         <View className={styles['users-link__item']}>
                             <View className={styles['users-link__icon']}>
                                 <Image src={message} className={styles['users-link__icon-help']} />
@@ -136,7 +136,7 @@ class Users extends Component {
                         </View>
 
                     </Navigator>
-                    <Navigator url='/pages/webview/help' className={styles['index__Navigator']}>
+                    <Navigator url='/pages/users/help_list' className={styles['index__Navigator']}>
                         <View className={styles['users-link__item']}>
                             <View className={styles['users-link__icon']}>
                                 <Image src={help} className={styles['users-link__icon-help']} />
@@ -149,7 +149,7 @@ class Users extends Component {
                             </View>
                         </View>
                     </Navigator>
-                    <Navigator url='/pages/webview/setting' className={styles['index__Navigator']}>
+                    <Navigator url='/pages/users/setting' className={styles['index__Navigator']}>
                         <View className={styles['users-link__item']}>
                             <View className={styles['users-link__icon']}>
                                 <Image src={setting} className={styles['users-link__icon-help']} />

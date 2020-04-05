@@ -1,20 +1,33 @@
 import Taro, { Component } from "@tarojs/taro";
-import { View, Text, Image, Navigator } from "@tarojs/components";
+import { View, Text, Navigator, Image } from "@tarojs/components";
+import httpRequest from "@/src/utils/request";
 import help_guide from "@/src/assets/images/help/help_guide.png";
-import help_update from "@/src/assets/images/help/help_update.png";
+// import help_update from "@/src/assets/images/help/help_update.png";
 // import help_account from '@/src/assets/images/help/help_account.png'
 import styles from "./help_list.module.scss";
 
 class Help extends Component {
   constructor() {
     super(...arguments);
-    this.state = {};
+    this.state = {
+      list: [],
+    };
     this.env = process.env.TARO_ENV;
   }
+  componentDidMount() {
+    httpRequest.get("/api/v1/contents/1/175").then((r) => {
+      this.setState({
+        list: r.data.value,
+      });
+    });
+  }
   config = {
-    navigationBarTitleText: "帮助中心"
+    navigationBarTitleText: "帮助中心",
   };
+
   render() {
+    const { list } = this.state;
+
     return (
       <View className={styles["help"]}>
         <View className={styles["help-link__item"]}>
@@ -25,31 +38,22 @@ class Help extends Component {
             />
           </View>
           <View className={styles["help-link__ask"]}>
-            <Navigator
-              url='/pages/webview/attention'
-              className={styles["index__Navigator"]}
-            >
-              <View className={styles["help-link__title"]}>
-                <Text className={styles["help-link__title-text"]}>
-                  上课须知 ？
-                </Text>
-              </View>
-            </Navigator>
-            <Navigator
-              url='/pages/webview/guide'
-              className={styles["index__Navigator"]}
-            >
-              <View
-                className={styles["help-link__title"]}
+            {list.map((item) => (
+              <Navigator
+                key={item.id}
+                url={`/pages/webview/article_detail?url=/api/v1/contents/${item.siteId}/${item.channelId}/${item.id}`}
+                className={styles["index__Navigator"]}
               >
-                <Text className={styles["help-link__title-text"]}>
-                  上课指南 ？
-                </Text>
-              </View>
-            </Navigator>
+                <View className={styles["help-link__title"]}>
+                  <Text className={styles["help-link__title-text"]}>
+                    {item.title}
+                  </Text>
+                </View>
+              </Navigator>
+            ))}
           </View>
         </View>
-        <View className={styles["help-link__separator"]} />
+        {/* <View className={styles["help-link__separator"]} />
         <View className={styles["help-link__item"]}>
           <View className={styles["help-link__icon"]}>
             <Image
@@ -59,7 +63,7 @@ class Help extends Component {
           </View>
           <View className={styles["help-link__ask"]}>
             <Navigator
-              url='/pages/webview/update_time'
+              url='/pages/webview/update_time_detail'
               className={styles["index__Navigator"]}
             >
               <View className={styles["help-link__title"]}>
@@ -69,7 +73,7 @@ class Help extends Component {
               </View>
             </Navigator>
             <Navigator
-              url='/pages/webview/update_notice'
+              url='/pages/webview/update_notice_detail'
               className={styles["index__Navigator"]}
             >
               <View className={styles["help-link__title"]}>
@@ -79,7 +83,7 @@ class Help extends Component {
               </View>
             </Navigator>
           </View>
-        </View>
+        </View> */}
         {/* <View className={styles['help-link__separator']} />
                 <View className={styles['help-link__item']}>
                     <View className={styles['help-link__icon']}>

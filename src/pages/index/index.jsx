@@ -12,8 +12,6 @@ import indexBg from "@/src/assets/images/index/index_bg.png";
 import messageIcon from "@/src/assets/images/index/crown.png";
 import noticeIcon from "@/src/assets/images/index/notice.png";
 import ok from "@/src/assets/images/index/ok.png";
-// import guide_bg_left from "@/src/assets/images/index/guide_bg_left.png";
-// import guide_bg_right from "@/src/assets/images/index/guide_bg_right.png";
 import { showShareMenu, getGlobalData } from "@/src/utils/index";
 import httpRequest from "@/src/utils/request";
 import styles from "./index.module.scss";
@@ -71,7 +69,7 @@ class Index extends Component {
             )}
           </Navigator>
           <Navigator
-            url='/pages/index/message_list'
+            url='/pages/index/recomm_list'
             className={styles["index__navigator"]}
           >
             <Image src={messageIcon} className={styles["index__message"]} />
@@ -127,7 +125,7 @@ class Index extends Component {
             autoplay
             circular
             interval={8000}
-            duration={1500}
+            duration={1000}
             className={styles["index-notice__swiper"]}
           >
             {Array.isArray(recomList) &&
@@ -135,7 +133,7 @@ class Index extends Component {
               recomList.map((item) => (
                 <SwiperItem key={item.id}>
                   <Navigator
-                    url={`/pages/webview/recom_detail?source=${item.source}`}
+                    url={`/pages/webview/index?source=${item.source}&pageTitle=${item.title}`}
                     className={styles["index-notice__swiper-Navigator"]}
                   >
                     <Image
@@ -157,7 +155,7 @@ class Index extends Component {
               guideList.map((item) => (
                 <Navigator
                   key={item.id}
-                  url={`/pages/webview/attention_detail?source=${item.source}`}
+                  url={`/pages/webview/index?source=${item.source}&pageTitle=${item.title}`}
                   className={styles["index__navigator"]}
                 >
                   <Image
@@ -166,12 +164,6 @@ class Index extends Component {
                   />
                 </Navigator>
               ))}
-            {/* <Navigator url='/pages/webview/attention_detail' className={styles['index__navigator']}>
-              <Image src={guide_bg_left} className={styles['index-guide__bg-left']} />
-            </Navigator>
-            <Navigator url='/pages/webview/guide_detail' className={styles['index__navigator']}>
-              <Image src={guide_bg_right} className={styles['index-guide__bg-right']} />
-            </Navigator> */}
           </View>
         </View>
       </View>
