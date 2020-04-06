@@ -24,7 +24,7 @@ class ArticleDetail extends Component {
 
   render() {
     return (
-      <View style={{ "max-width": "100%", padding: "0px 20px" }}>
+      <View style={{ "max-width": "100%", padding: "20px" }}>
         <RichText nodes={this.state.detailString} />
       </View>
     );
