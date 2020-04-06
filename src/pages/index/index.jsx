@@ -147,7 +147,7 @@ class Index extends Component {
         </View>
         <View className={styles["index-guide"]}>
           <View className={styles["index__maintitle"]}>
-            <Text className={styles["index__maintitle-text"]}>操作指引</Text>
+            <Text className={styles["index__maintitle-text"]}>操作指南</Text>
           </View>
           <View className={styles["index-guide__content"]}>
             {Array.isArray(guideList) &&

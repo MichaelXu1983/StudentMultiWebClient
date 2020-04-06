@@ -1,7 +1,6 @@
 import Taro, { Component } from "@tarojs/taro";
 import { View, RichText } from "@tarojs/components";
 import httpRequest from "@/src/utils/request";
-import styles from "./index.module.scss";
 
 class ArticleDetail extends Component {
   constructor() {
@@ -25,11 +24,8 @@ class ArticleDetail extends Component {
 
   render() {
     return (
-      <View className={styles["article-detail"]}>
-        <RichText
-          className={styles["article-detail__richtext"]}
-          nodes={this.state.detailString}
-        />
+      <View style={{ "max-width": "100%", padding: "0px 20px" }}>
+        <RichText nodes={this.state.detailString} />
       </View>
     );
   }
