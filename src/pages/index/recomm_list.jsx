@@ -8,25 +8,25 @@ import styles from "./recomm_list.module.scss";
 
 class Message extends Component {
   static options = {
-    addGlobalClass: true, // 支持组件外部样式，小程序基础库版本 2.2.3 开始支持
+    addGlobalClass: true // 支持组件外部样式，小程序基础库版本 2.2.3 开始支持
   };
   constructor() {
     super(...arguments);
     this.state = {
-      list: [],
+      list: []
     };
     this.env = process.env.TARO_ENV;
   }
   componentDidMount() {
-    httpRequest.get("/api/v1/contents/1/172").then((r) => {
+    httpRequest.get("/api/v1/contents/1/172").then(r => {
       this.setState({
-        list: r.data.value,
+        list: r.data.value
       });
     });
   }
 
   config = {
-    navigationBarTitleText: "官方推荐",
+    navigationBarTitleText: "官方推荐"
   };
 
   render() {
@@ -35,10 +35,10 @@ class Message extends Component {
     return (
       <View className={styles["notice"]}>
         <View className={styles["notice-item__container"]}>
-          {list.map((item) => (
+          {list.map(item => (
             <Navigator
               key={item.id}
-              url={`/pages/webview/article_detail?url=/api/v1/contents/${item.siteId}/${item.channelId}/${item.id}`}
+              url={`/pages/webview/index?source=${item.source}&pageTitle=${item.title}`}
               className={styles["index__Navigator"]}
             >
               <View className={styles["notice-item"]}>
