@@ -1,4 +1,5 @@
-import Taro from '@tarojs/taro'
+import Taro from "@tarojs/taro";
+import { getGlobalData } from "@/src/utils";
 
 // 请求拦截器
 // const customInterceptor = (chain) => {
@@ -43,27 +44,27 @@ import Taro from '@tarojs/taro'
 //     GATEWAY_TIMEOUT: 504
 // }
 
-const getBaseUrl = (url) => {
-    // 根据请求不同返回不同的 BASE_URL
-    let BASE_URL = '';
-    if (process.env.NODE_ENV === 'development') {
-        // 开发环境
-        if (url.includes('/api/')) {
-            BASE_URL = 'https://www.tdreamer.com'
-            // BASE_URL = ''
-        } else {
-            BASE_URL = ''
-        }
+const getBaseUrl = url => {
+  // 根据请求不同返回不同的 BASE_URL
+  let BASE_URL = "";
+  if (process.env.NODE_ENV === "development") {
+    // 开发环境
+    if (url.includes("/api/")) {
+      BASE_URL = getGlobalData("businessDomain");
+      // BASE_URL = ''
     } else {
-        // 生产环境
-        if (url.includes('/api/')) {
-            BASE_URL = 'https://www.tdreamer.com'
-        } else {
-            BASE_URL = ''
-        }
+      BASE_URL = "";
     }
-    return BASE_URL
-}
+  } else {
+    // 生产环境
+    if (url.includes("/api/")) {
+      BASE_URL = getGlobalData("businessDomain");
+    } else {
+      BASE_URL = "";
+    }
+  }
+  return BASE_URL;
+};
 
 /**
  * Requests a URL, returning a promise.
@@ -74,44 +75,43 @@ const getBaseUrl = (url) => {
  */
 
 class httpRequest {
-    baseOptions(params, method = "GET") {
-        let { url, data } = params;
-        const BASE_URL = getBaseUrl(url);
-        let contentType = "application/json";
-        contentType = params.contentType || contentType;
-        const option = {
-            url: BASE_URL + url,
-            data: data,
-            method: method,
-            header: {
-                'content-type': contentType,
-                'X-SS-API-KEY': '7538c18a-9588-40c5-995b-b8a4adf04095' // 第三方生成
-                //   'Authorization': Taro.getStorageSync('Authorization')
-            }
-        };
-        return Taro.request(option);
-    }
+  baseOptions(params, method = "GET") {
+    let { url, data } = params;
+    const BASE_URL = getBaseUrl(url);
+    let contentType = "application/json";
+    contentType = params.contentType || contentType;
+    const option = {
+      url: BASE_URL + url,
+      data: data,
+      method: method,
+      header: {
+        "content-type": contentType,
+        "X-SS-API-KEY": "7538c18a-9588-40c5-995b-b8a4adf04095" // 第三方生成
+        //   'Authorization': Taro.getStorageSync('Authorization')
+      }
+    };
+    return Taro.request(option);
+  }
 
-    get(url, data = "") {
-        let option = { url, data };
-        return this.baseOptions(option);
-    }
+  get(url, data = "") {
+    let option = { url, data };
+    return this.baseOptions(option);
+  }
 
-    post(url, data, contentType) {
-        let params = { url, data, contentType };
-        return this.baseOptions(params, "POST");
-    }
+  post(url, data, contentType) {
+    let params = { url, data, contentType };
+    return this.baseOptions(params, "POST");
+  }
 
-    put(url, data = "") {
-        let option = { url, data };
-        return this.baseOptions(option, "PUT");
-    }
+  put(url, data = "") {
+    let option = { url, data };
+    return this.baseOptions(option, "PUT");
+  }
 
-    delete(url, data = "") {
-        let option = { url, data };
-        return this.baseOptions(option, "DELETE");
-    }
-
+  delete(url, data = "") {
+    let option = { url, data };
+    return this.baseOptions(option, "DELETE");
+  }
 }
 
-export default new httpRequest()
+export default new httpRequest();

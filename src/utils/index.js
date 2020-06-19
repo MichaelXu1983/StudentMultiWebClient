@@ -1,3 +1,13 @@
+/*
+ * @Author: Michael Xu
+ * @Date: 2020-02-02 20:40:44
+ * @LastEditTime: 2020-06-15 12:03:29
+ * @LastEditors: Michael Xu
+ * @Description:
+ * @FilePath: /StudentMultiWebClient/src/utils/index.js
+ * @Blog: https://www.michaelxu.cn/
+ */
+
 import Taro from "@tarojs/taro";
 
 const globalData = {};
@@ -10,7 +20,7 @@ function getGlobalData(key) {
   return globalData[key];
 }
 
-setGlobalData("businessDomain", "https://www.tdreamer.com");
+setGlobalData("businessDomain", "https://api.codekid.top");
 
 function isEmptyObject(obj) {
   if (!obj) {
