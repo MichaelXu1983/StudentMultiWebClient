@@ -7,6 +7,7 @@
   /*  #endif  */
   padding-bottom: 100px;
 }
+// courses-header
 .courses-header {
   position: relative;
   width: 100%;
@@ -20,10 +21,14 @@
   width: 100%;
   height: 100%;
 }
+.courses-header__intro {
+  width: 92%;
+  margin: 0 auto;
+}
 .courses-header__intro-maintitle {
   position: relative;
   z-index: 99;
-  padding: 50px 60px 0 60px;
+  padding: 50px 10px 0 10px;
 }
 .courses-header__intro-subtitle {
   /*  #ifndef  rn  */
@@ -35,7 +40,7 @@
   overflow: hidden;
   position: relative;
   z-index: 99;
-  padding: 20px 60px 0 60px;
+  padding: 20px 10px 0 10px;
   max-height: 230px;
 }
 .courses-header__maintitle-text {
@@ -49,15 +54,28 @@
   line-height: 47px;
   letter-spacing: 2px;
 }
+
+//courses-item__container
 .courses-item__container {
   position: relative;
   z-index: 99;
-  width: 90%;
+  width: 92%;
   min-height: 100%;
-  margin: -100px auto;
+  margin: -100px auto -50px auto;
+}
+@media screen and (min-width: 30em) and (orientation: landscape) {
+  .courses-item__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    & > div {
+      width: 48%;
+      margin: 0 1%;
+    }
+  }
 }
 .courses-item {
-  margin-bottom: 50px;
+  margin: 0 10px 50px 10px;
   background-color: #f7f7f9;
   border-radius: 20px;
 }
@@ -66,8 +84,7 @@
   position: relative;
   z-index: 99;
   width: 100%;
-  height: 336px;
-  background: #70449e;
+  height: auto;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -83,10 +100,12 @@
 .courses-item__maintitle {
   line-height: 40px;
   padding: 40px 40px 0 40px;
+  text-align: left;
 }
 .courses-item__subtitle {
   line-height: 40px;
   padding: 20px 40px 40px 40px;
+  text-align: left;
 }
 .courses-item__maintitle-text {
   letter-spacing: 2px;
@@ -104,4 +123,27 @@
   line-height: 42px;
   color: #777;
   font-size: 26px;
+}
+// courses-item__container
+.courses-swiper__container {
+  /*  #ifndef  rn  */
+  display: block;
+  /*  #endif  */
+  height: 100%;
+  text-align: center;
+}
+.courses-swiper__item {
+  min-height: 700px;
+  height: 100%;
+  border-radius: 20px;
+}
+.courses-swiper__container-img {
+  position: relative;
+  z-index: 99;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 0 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }

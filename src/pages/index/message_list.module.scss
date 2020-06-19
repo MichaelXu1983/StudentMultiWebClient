@@ -10,6 +10,17 @@
   margin: 0px auto;
   padding: 50px 0;
 }
+@media screen and (min-width: 30em) and (orientation: landscape) {
+  .message-item__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    & > div {
+      width: 48%;
+      margin: 0 1%;
+    }
+  }
+}
 .message-item {
   position: relative;
   margin-bottom: 50px;
@@ -22,7 +33,7 @@
   flex-direction: row;
 }
 .message-item__intro {
-    line-height: 38px;
+  line-height: 38px;
   padding-left: 20px;
 }
 .message-item__thumb {

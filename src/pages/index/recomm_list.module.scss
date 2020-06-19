@@ -11,6 +11,17 @@
     margin: 0px auto;
     padding: 50px 0;
 }
+@media screen and (min-width: 30em) and (orientation: landscape) {
+    .notice-item__container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        & > div {
+            width: 48%;
+            margin: 0 1%;
+        }
+    }
+}
 .notice-item {
     position: relative;
     margin-bottom: 50px;

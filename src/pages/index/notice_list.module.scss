@@ -11,6 +11,17 @@
   margin: 0px auto;
   padding: 50px 0;
 }
+@media screen and (min-width: 30em) and (orientation: landscape) {
+  .notice-item__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    & > div {
+      width: 48%;
+      margin: 0 1%;
+    }
+  }
+}
 .notice-item {
   position: relative;
   margin-bottom: 50px;
@@ -19,11 +30,11 @@
   border-radius: 20px;
 }
 .notice-item__intro-container {
-  display: flex;
-  flex-direction: row;
+  // display: flex;
+  // flex-direction: row;
 }
 .notice-item__intro {
-  padding-left: 20px;
+  // padding-left: 20px;
 }
 .notice-item__thumb {
   margin-top: 20px;

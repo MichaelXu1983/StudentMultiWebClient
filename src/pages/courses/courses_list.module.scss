@@ -30,7 +30,7 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
-    /*  #endif  */
+  /*  #endif  */
   overflow: hidden;
   position: relative;
   z-index: 99;
@@ -57,6 +57,7 @@
   min-height: 100%;
   margin: -100px auto 0 auto;
 }
+
 .courses-list-item {
   /*  #ifndef  rn  */
   display: flex;
@@ -101,7 +102,7 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   /*  #endif  */
- 
+
   overflow: hidden;
   text-align: left;
 }
@@ -112,7 +113,7 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   /*  #endif  */
- 
+
   overflow: hidden;
 }
 .courses-list-item__maintitle {
