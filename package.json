@@ -58,7 +58,7 @@
     "@tarojs/plugin-csso": "2.0.3",
     "@tarojs/plugin-sass": "2.0.3",
     "@tarojs/plugin-uglifyjs": "2.0.3",
-    "@tarojs/webpack-runner": "2.0.3",
+    "@tarojs/webpack-runner": "3.5.7",
     "@types/react": "^16.4.8",
     "@types/webpack-env": "^1.13.6",
     "babel-eslint": "^8.2.3",
